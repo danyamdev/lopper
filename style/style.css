@@ -1,0 +1,262 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #30233D;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  color: #30233D;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 67px;
+}
+
+.container {
+  max-width: 1175px;
+  width: 95%;
+  margin: auto;
+}
+
+.header {
+  padding-top: 60px;
+  margin-bottom: 55px;
+}
+
+.header__inner,
+.header__nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo a {
+  font-size: 24px;
+  line-height: 43px;
+  letter-spacing: 2px;
+  color: #30124E;
+}
+
+.header__nav-item:not(:last-child) {
+  margin-right: 54px;
+}
+
+.header__nav-link {
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.header__nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #30233D;
+  transition: width .3s ease;
+}
+
+.header__nav-item:hover .header__nav-link::before {
+  width: 100%;
+  transition: width .3s ease;
+}
+
+.header__phone {
+  position: relative;
+}
+
+.header__phone::before {
+  content: url('../images/icons/phone.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: -36px;
+}
+
+.header__menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 27px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.header__menu span,
+.header__menu span::before,
+.header__menu span::after {
+  display: block;
+  width: 27px;
+  height: 2px;
+  position: absolute;
+  background-color: #30233D;
+}
+
+.header__menu span::before {
+  content: '';
+  top: -5px;
+}
+
+.header__menu span::after {
+  content: '';
+  top: 5px;
+  right: 0;
+  width: 18px;
+}
+
+.team-bg {
+  background-image: linear-gradient(to top, rgba(38, 9, 75, 0.7), rgba(38, 9, 75, 0.7)),
+  url('../images/main-bg.jpg');
+  background-size: contain, cover;
+  background-repeat: no-repeat, no-repeat;
+  mix-blend-mode: multiply;
+  padding: 120px 0 100px;
+}
+
+.team-bg__main-title h1{
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 80px;
+  margin-bottom: 10px;
+  color: #f61067;
+}
+
+.team-bg__main-title p {
+  font-size: 18px;
+  line-height: 37px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #f4f4ed;
+}
+
+.intro {
+  padding: 190px 0 280px;
+}
+
+.intro__inner {
+  max-width: 558px;
+  width: 100%;
+  margin: auto;
+  padding: 0 40px;
+  text-align: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.intro__subtitle span {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 26px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: #F61067;
+}
+
+.intro__description {
+  margin-top: 23px;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.team {
+  background-color: #150433;
+}
+
+.team__list {
+  position: relative;
+  top: -120px;
+  max-width: 1045px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.team__item {
+  max-width: 267px;
+  width: 100%;
+  margin-bottom: 130px;
+  text-align: center;
+}
+
+.team__item-avatar img {
+  max-width: 262px;
+  max-height: 262px;
+  object-fit: cover;
+}
+
+.team__item-info {
+  margin: 22px 0 8px;
+  font-weight: 800;
+  color: #fcfcfc;
+}
+
+.team__item-name {
+  font-size: 21px;
+  line-height: 35px;
+  
+}
+
+.team__item-specialty {
+  font-size: 12px;
+  line-height: 26px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.team__item-social object:nth-child(2) {
+  margin: 0 40px 0 40px;
+}
